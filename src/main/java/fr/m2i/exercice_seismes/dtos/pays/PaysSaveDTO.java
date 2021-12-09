@@ -4,16 +4,16 @@ import fr.m2i.exercice_seismes.dtos.seismes.SeismeDTO;
 
 import java.util.List;
 
-public class PaysDTO {
+public class PaysSaveDTO {
     private String id;
     private String name;
     private String code;
     private List<SeismeDTO> seismes;
 
-    public PaysDTO() {
+    public PaysSaveDTO() {
     }
 
-    public PaysDTO(String id, String name, String code, List<SeismeDTO> seismes) {
+    public PaysSaveDTO(String id, String name, String code, List<SeismeDTO> seismes) {
         this.id = id;
         this.name = name;
         this.code = code;

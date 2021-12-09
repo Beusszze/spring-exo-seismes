@@ -1,33 +1,22 @@
 package fr.m2i.exercice_seismes.dtos.seismes;
 
 import fr.m2i.exercice_seismes.dtos.pays.PaysDTO;
-import fr.m2i.exercice_seismes.entities.Pays;
+import fr.m2i.exercice_seismes.dtos.pays.PaysRelationDTO;
 
-public class SeismeDTO {
-    private String id;
+public class SeismeSaveDTO {
     private String nom;
     private float magnitude;
     private String date;
+   private PaysRelationDTO pays;
 
-   private  PaysDTO pays;
-
-    public SeismeDTO() {
+    public SeismeSaveDTO() {
     }
 
-    public SeismeDTO(String id, String nom, float magnitude, String date, PaysDTO pays) {
-        this.id = id;
+    public SeismeSaveDTO(String nom, float magnitude, String date, PaysRelationDTO pays) {
         this.nom = nom;
         this.magnitude = magnitude;
         this.date = date;
         this.pays = pays;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getNom() {
@@ -54,11 +43,11 @@ public class SeismeDTO {
         this.date = date;
     }
 
-    public PaysDTO getPays() {
+    public PaysRelationDTO getPays() {
         return pays;
     }
 
-    public void setPays(PaysDTO pays) {
+    public void setPays(PaysRelationDTO pays) {
         this.pays = pays;
     }
 }
